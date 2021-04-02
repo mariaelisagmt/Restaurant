@@ -147,7 +147,7 @@ img {
 @media screen and (max-width: 768px) {
     .nav__menu{
         position: fixed;/*duvida*/
-        top: var(--header-height);
+        top: -100%; /*Esconder o menu*/
         left: 0;
         width: 100%;
         padding: 1.5rem 0 1rem;
@@ -155,7 +155,8 @@ img {
         background-color: var(--body-color);
         transition: .4s;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 0 0 1rem; 
+        border-radius: 0 0 1rem;
+        z-index: var(--z-fixed);
     }
 }
 
@@ -186,5 +187,88 @@ img {
 }
 
 /*Show the Menu*/
+.show-menu {
+    top: var(--header-height);
+}
+
 /*Active Menu*/
+.active-link {
+    color: var(--first-color);
+}
+
+/*Change background header*/
+.scroll-header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/*Scroll top*/
+.scrolltop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background: rgba(6, 156, 84, .5);
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    visibility: hidden;
+}
+
+.scrolltop:hover {
+    background: var(--first-color-alt);  
+}
+
+.scrolltop__icon {
+    font-size: 1.8rem;
+    color: var(--body-color);
+}
+
+/*Show scrolltop*/
+.scroll-top {
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
+/*====Home====*/
+.home__container {
+    height: calc(100vh - var(--header-height));
+    align-content: center;
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    color: var(--first-color);
+    margin-bottom: var(--mb-1);
+}
+
+.home__subtitle {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--mb-4);
+}
+
+.home__img {
+    width: 300px;
+    justify-self: center;
+}
+
+/*====Buttons====*/
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #FFFFFF;
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--first-color--alt);
+}
+/*====About====*/
+
+/*====Services====*/
+/*====Menu====*/
 
