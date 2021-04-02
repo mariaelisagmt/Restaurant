@@ -217,7 +217,7 @@ img {
 }
 
 .scrolltop:hover {
-    background: var(--first-color-alt);  
+    background-color: var(--first-color-alt);  
 }
 
 .scrolltop__icon {
@@ -233,7 +233,7 @@ img {
 
 /*====Home====*/
 .home__container {
-    height: calc(100vh - var(--header-height));
+    height: calc(100vh - 28rem) /*var(--header-height)*/;
     align-content: center;
 }
 
@@ -265,10 +265,22 @@ img {
 }
 
 .button:hover {
-    background-color: var(--first-color--alt);
+    background-color: var(--first-color-alt); 
 }
 /*====About====*/
+.about__data {
+    text-align: center;
+}
 
+.about__description {
+    margin-bottom: var(--mb-3);
+}
+
+.about__img {
+    width: 280px;
+    border-radius: .5rem;
+    justify-self: center; /*dúvida*/
+}
 /*====Services====*/
 /*====Menu====*/
 
